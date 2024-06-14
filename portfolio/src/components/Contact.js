@@ -1,40 +1,38 @@
 
 import React, { useState } from 'react';
-import { useForm, ValidationError } from '@formspree/react';
 import { validateEmail } from '../utils/helpers';
 // import Navigation from './components/Navigation';
-require('dotenv').config()
 
 
 function Contact() {
-  const [state, handleSubmit] = useForm(process.env.REACT_APP_FORM_ID);
+  
 
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
   const [errorMessage, setErrorMessage] = useState('');
   const { name, email, message } = formState;
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (!errorMessage) {
-  //     console.log('Submit Form', formState);
-  //   }
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!errorMessage) {
+      console.log('Submit Form', formState);
+    }
+  };
 
-  // function refreshPage() {
-  //   window.location.reload(true);
-  // }
+  function refreshPage() {
+    window.location.reload(true);
+  }
 
 
-  if (state.succeeded) {
-    return (
-      <div>
-        <p>Thanks for reaching out!</p>
-        <button className="button is-medium is-primary is-half m-6" onClick={()=> window.open("/#contact")}>Back to About</button>
-        {/* This form button is broken. It was supposed to refresh the page so you can submit a new form, but I'm changing this bug into a feature that takes you back to the about section. */}
-      </div>
-    );
-}
+  // if (state.succeeded) {
+    // return (
+//       <div>
+//         <p>Thanks for reaching out!</p>
+//         <button className="button is-medium is-primary is-half m-6" onClick={()=> window.open("/#contact")}>Back to About</button>
+//         {/* This form button is broken. It was supposed to refresh the page so you can submit a new form, but I'm changing this bug into a feature that takes you back to the about section. */}
+//       </div>
+//     );
+// }
 
 
   const handleChange = (e) => {

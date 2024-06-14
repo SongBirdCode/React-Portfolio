@@ -18,7 +18,7 @@ function Footer() {
             LinkedIn
           </a>{" "}
           |{" "}{" "}
-          <a href="" target="_blank" rel="noreferrer">
+          <a href="" target="" rel="">
           </a>
         </p>
       </div>
