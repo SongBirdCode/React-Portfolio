@@ -1,6 +1,6 @@
 #  Create React App
 
-Objective is to make a functional website utilizing newfound REACT skills! 
+Objective is to make a functional website utilizing newfound REACT skills! Deployed using Netlify. 
 
 ## Available Scripts
 
